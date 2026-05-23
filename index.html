@@ -525,7 +525,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Sriprathyusha Dosapati. Built with intent, deployed on Vercel.</p>
+  <p>© 2026 Sriprathyusha Dosapati</p>
   <p><a href="https://github.com/sri-dosapati" target="_blank">github.com/sri-dosapati</a></p>
 </footer>
 
@@ -544,13 +544,13 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // GitHub repos
-  const PINNED = ['FizzBizzByNumbers', 'NzProducts.Management', 'ListingsManagement'];
+  const PINNED = ['NzProducts.Management', 'ListingsManagement'];
   const LANG_DOT = { 'C#': 'csharp', 'PLSQL': 'sql', 'TSQL': 'sql' };
 
   async function loadRepos() {
     const grid = document.getElementById('projects-grid');
     try {
-      const res   = await fetch('https://api.github.com/users/sri-dosapati/repos?per_page=100&sort=updated');
+      const res   = await fetch('https://api.github.com/users/sri-dosapati/repos?per_page=2&sort=updated');
       const repos = await res.json();
       const sorted = repos
         .filter(r => !r.fork)
